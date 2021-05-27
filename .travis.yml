@@ -1,4 +1,4 @@
-language : java
+language: java
 jdk:
   - openjdk8
 
@@ -17,4 +17,4 @@ script: "./gradlew clean build"
 notifications:
   email:
     recipients:
-    - toidep15@gmail.com
+      - toidep15@gmail.com
