@@ -7,7 +7,7 @@ branches:
     - master
 
 before_deploy:
-  - zip -r freelec-springboot2-webservice freelec-springboot2-webservice
+  - zip -r freelec-springboot2-webservice freelec-springboot2-web
   - mkdir -p deploy
   - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
 deploy:
@@ -20,7 +20,7 @@ deploy:
     acl: private
     local_dir: deploy
     wait-until-deployed: true
-    
+
 #travis ci 서버의 home
 cache:
   directories:
