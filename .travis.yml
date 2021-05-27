@@ -1,0 +1,20 @@
+language : java
+jdk:
+  -openjk8
+
+branches:
+  only:
+    -master
+
+#travis ci 서버의 home
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.gralde'
+script: "./gradlew clean build"
+
+#ci 실행 완료시 메일로 알람
+notifications:
+  email:
+    recipients:
+    - toidep15@gmail.com
