@@ -1,16 +1,16 @@
 language : java
 jdk:
-  -openjk8
+  - openjk8
 
 branches:
   only:
-    -master
+    - master
 
 #travis ci 서버의 home
 cache:
   directories:
     - '$HOME/.m2/repository'
-    - '$HOME/.gralde'
+    - '$HOME/.gradle'
 script: "./gradlew clean build"
 
 #ci 실행 완료시 메일로 알람
