@@ -7,6 +7,8 @@ branches:
     - master
 
 before_deploy:
+  - mkdir -p before-deploy
+  - cp scripts/*.sh before-deploy/
   - zip -r freelec-springboot2-webservice *
   - mkdir -p deploy
   - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
